@@ -9,5 +9,6 @@ PYBIND11_MODULE(pyvfc, m) {
         .def(py::init())
         .def("setData", &VFC::setData)
         .def("optimize", &VFC::optimize)
+        .def("setMethod", &VFC::setMethod)
         .def("obtainCorrectMatch", &VFC::obtainCorrectMatch);
 }

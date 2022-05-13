@@ -75,6 +75,29 @@ vector<int> VFC::obtainCorrectMatch() {
 	return _matchIdx;
 }
 
+void VFC::setMethod(int method){
+    /*
+        NORMAL_VFC 1
+        FAST_VFC   2
+        SPARSE_VFC 3
+    */
+    
+    switch(method){
+        case 1:{
+            _method = NORMAL_VFC;
+        }
+        case 2:{
+            _method = FAST_VFC;
+        }
+        case 3:{
+            _method = SPARSE_VFC;
+        }
+        default:{
+            _method = NORMAL_VFC;
+        }
+    }
+}
+
 void VFC::optimize() {
 	if (!normalize())
 		return;

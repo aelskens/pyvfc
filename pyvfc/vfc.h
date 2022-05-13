@@ -79,6 +79,7 @@ public:
 	// for SparseVFC only
 	bool selectSubset();
 	void calculateC_SparseVFC();
+	void setMethod(int method);
 private:
 	vector<int> _matchIdx;
 	int _numPt; // number of matches
