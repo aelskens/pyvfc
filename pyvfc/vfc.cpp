@@ -51,6 +51,46 @@ VFC::VFC() {
 	_numCtrlPts = 16;
 }
 
+VFC::VFC(int method, int maxIter, float gamma, float beta, float lambda, float theta, float a, float ecr, float minP) {
+	_lX.clear();
+	_rX.clear();
+	_X.clear();
+	_Y.clear();
+	_V.clear();
+	_C.clear();
+	_P.clear();
+	_ctrlPts.clear();
+
+	_sumP = 0;
+	_sigma2 = 0;
+	_E = 1;
+	_traceCKC = 0;
+
+	_numPt = 0;
+	_numDim = 2;
+	_numElement = 0;
+
+	// set the default method
+	// NORMAL_VFC 1
+	// FAST_VFC   2
+	// SPARSE_VFC 3
+	_method = method; 
+
+	_maxIter = maxIter;
+	_gamma = gamma;
+	_beta = beta;
+	_lambda = lambda;
+	_theta = theta;
+	_a = a;
+	_ecr = ecr;
+	_minP = minP;
+
+	_numEig = 1;
+	_traceCQSQC = 0;
+
+	_numCtrlPts = 16;
+}
+
 VFC::~VFC() {
 
 }
@@ -73,29 +113,6 @@ bool VFC::setData(const vector<tuple<float, float>> X1, const vector<tuple<float
 
 vector<int> VFC::obtainCorrectMatch() {
 	return _matchIdx;
-}
-
-void VFC::setMethod(int method){
-    /*
-        NORMAL_VFC 1
-        FAST_VFC   2
-        SPARSE_VFC 3
-    */
-    
-    switch(method){
-        case 1:{
-            _method = NORMAL_VFC;
-        }
-        case 2:{
-            _method = FAST_VFC;
-        }
-        case 3:{
-            _method = SPARSE_VFC;
-        }
-        default:{
-            _method = NORMAL_VFC;
-        }
-    }
 }
 
 void VFC::optimize() {
