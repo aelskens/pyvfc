@@ -55,7 +55,6 @@ using namespace std;
 
 class VFC{
 public:
-	VFC();
 	VFC(int method = 3, int maxIter = 50, float gamma = 0.9f, float beta = 0.1f, float lambda = 3.0f, float theta = 0.75f, float a = 10.0f, float ecr = 1e-5f, float minP = 1e-5f);
 	~VFC();
 	bool setData(const vector<tuple<float, float>> X1, const vector<tuple<float, float>> X2);

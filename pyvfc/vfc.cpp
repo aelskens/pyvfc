@@ -12,45 +12,6 @@
 //     Regularized Vector Field Learning with Sparse Approximation for Mismatch Removal, 
 //     Pattern Recognition, 46(12), pp. 3519-3532, 2013
 
-VFC::VFC() {
-	_lX.clear();
-	_rX.clear();
-	_X.clear();
-	_Y.clear();
-	_V.clear();
-	_C.clear();
-	_P.clear();
-	_ctrlPts.clear();
-
-	_sumP = 0;
-	_sigma2 = 0;
-	_E = 1;
-	_traceCKC = 0;
-
-	_numPt = 0;
-	_numDim = 2;
-	_numElement = 0;
-
-	// set the default method
-	//_method = NORMAL_VFC;
-	//_method = FAST_VFC;
-	_method = SPARSE_VFC;
-
-	_maxIter = 50;
-	_gamma = 0.9f;
-	_beta = 0.1f;
-	_lambda = 3.0f;
-	_theta = 0.75f;
-	_a = 10.0f;
-	_ecr = 1e-5f;
-	_minP = 1e-5f;
-
-	_numEig = 1;
-	_traceCQSQC = 0;
-
-	_numCtrlPts = 16;
-}
-
 VFC::VFC(int method, int maxIter, float gamma, float beta, float lambda, float theta, float a, float ecr, float minP) {
 	_lX.clear();
 	_rX.clear();
