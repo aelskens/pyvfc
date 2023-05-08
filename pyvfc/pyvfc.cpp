@@ -7,8 +7,8 @@ namespace py = pybind11;
 PYBIND11_MODULE(pyvfc, m) {
     py::class_<VFC>(m, "VFC")
         .def(py::init())
+        .def(py::init<int, int, float, float, float, float, float, float, float>())
         .def("setData", &VFC::setData)
         .def("optimize", &VFC::optimize)
-        .def("setMethod", &VFC::setMethod)
         .def("obtainCorrectMatch", &VFC::obtainCorrectMatch);
 }
