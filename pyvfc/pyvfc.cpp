@@ -33,7 +33,7 @@ PYBIND11_MODULE(pyvfc, m) {
             :type minP: float, optional
         )mydelimiter")
         .def(py::init<int, int, float, float, float, float, float, float, float>(), 
-            py::arg("method") = 3, py::arg("maxIter") = 50, py::arg("gamma") = 0.9f,
+            py::arg("method") = 3, py::arg("maxIter") = 500, py::arg("gamma") = 0.9f,
             py::arg("beta") = 0.1f, py::arg("lmbda") = 3.0f, py::arg("theta") = 0.75f,
             py::arg("a") = 10.0f, py::arg("ecr") = 1e-5, py::arg("minP") = 1e-5)
         .def("setData", &VFC::setData)
