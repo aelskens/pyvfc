@@ -72,9 +72,16 @@ bool VFC::setData(const vector<tuple<float, float>> X1, const vector<tuple<float
 	return 1;
 }
 
-vector<int> VFC::obtainCorrectMatch() {
-	return _matchIdx;
-}
+vector<int> VFC::obtainCorrectMatch() const{return _matchIdx;}
+int VFC::getMethod() const{return _method;}
+int VFC::getMaxIter() const{return _maxIter;}
+int VFC::getGamma() const{return _gamma;}
+int VFC::getBeta() const{return _beta;}
+int VFC::getLambda() const{return _lambda;}
+int VFC::getTheta() const{return _theta;}
+int VFC::getA() const{return _a;}
+int VFC::getEcr() const{return _ecr;}
+int VFC::getMinP() const{return _minP;}
 
 void VFC::optimize() {
 	if (!normalize())

@@ -72,7 +72,16 @@ public:
 	void optimizeVFC();
 	void optimizeFastVFC();
 	void optimizeSparseVFC();
-	vector<int> obtainCorrectMatch();
+	vector<int> obtainCorrectMatch() const;
+	int getMethod() const;
+	int VFC::getMaxIter() const;
+	int VFC::getGamma() const;
+	int VFC::getBeta() const;
+	int VFC::getLambda() const;
+	int VFC::getTheta() const;
+	int VFC::getA() const;
+	int VFC::getEcr() const;
+	int VFC::getMinP() const;
 	// for FastVFC only
 	void calculateTraceCQSQC();
 	void calculateCFastVFC();
