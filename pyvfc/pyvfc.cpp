@@ -38,14 +38,14 @@ PYBIND11_MODULE(pyvfc, m) {
             py::arg("a") = 10.0f, py::arg("ecr") = 1e-5, py::arg("minP") = 1e-5)
         .def("setData", &VFC::setData)
         .def("optimize", &VFC::optimize)
-        .def("obtainCorrectMatch", &VFC::obtainCorrectMatch);
-        .def("getMethod", &VFC::getMethod);
-        .def("getMaxIter", &VFC::getMaxIter);
-        .def("getGamma", &VFC::getGamma);
-        .def("getBeta", &VFC::getBeta);
-        .def("getLambda", &VFC::getLambda);
-        .def("getTheta", &VFC::getTheta);
-        .def("getA", &VFC::getA);
-        .def("getEcr", &VFC::getEcr);
+        .def("obtainCorrectMatch", &VFC::obtainCorrectMatch)
+        .def("getMethod", &VFC::getMethod)
+        .def("getMaxIter", &VFC::getMaxIter)
+        .def("getGamma", &VFC::getGamma)
+        .def("getBeta", &VFC::getBeta)
+        .def("getLambda", &VFC::getLambda)
+        .def("getTheta", &VFC::getTheta)
+        .def("getA", &VFC::getA)
+        .def("getEcr", &VFC::getEcr)
         .def("getMinP", &VFC::getMinP);
 }
