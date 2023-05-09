@@ -11,7 +11,7 @@ PYBIND11_MODULE(pyvfc, m) {
             :param method: The method for outlier removal. The options are 1 for NORMAL_VFC, 2 for FAST_VFC
             and 3 for SPARSE_VFC, defaults to 3.
             :type method: int, optional
-            :param maxIter: The maximum number of iterations, defaults to 50.
+            :param maxIter: The maximum number of iterations, defaults to 500.
             :type maxIter: int, optional
             :param gamma: Percentage of inliers in the samples. This is an inital value for EM iteration
             and is not important, defaults to 0.9.
