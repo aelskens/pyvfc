@@ -75,13 +75,13 @@ public:
 	vector<int> obtainCorrectMatch() const;
 	int getMethod() const;
 	int getMaxIter() const;
-	int getGamma() const;
-	int getBeta() const;
-	int getLambda() const;
-	int getTheta() const;
-	int getA() const;
-	int getEcr() const;
-	int getMinP() const;
+	float getGamma() const;
+	float getBeta() const;
+	float getLambda() const;
+	float getTheta() const;
+	float getA() const;
+	float getEcr() const;
+	float getMinP() const;
 	// for FastVFC only
 	void calculateTraceCQSQC();
 	void calculateCFastVFC();

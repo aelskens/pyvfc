@@ -18,8 +18,8 @@ PYBIND11_MODULE(pyvfc, m) {
             :type gamma: float, optional
             :param beta: Paramerter of Gaussian Kernel, k(x, y) = exp(-beta* || x - y || ^ 2), defaults to 0.1.
             :type beta: float, optional
-            :param lambda: Represents the trade-off between the goodness of data fit and smoothness of the field, defaults to 3.0.
-            :type lambda: float, optional
+            :param lmbda: Represents the trade-off between the goodness of data fit and smoothness of the field, defaults to 3.0.
+            :type lmbda: float, optional
             :param theta: The threshold value that determines whether the sample is an inliner or not. An inliner has a posterior
             probability which is superior to theta, defaults to 0.75.
             :type theta: float, optional
