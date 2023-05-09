@@ -12,7 +12,7 @@
 //     Regularized Vector Field Learning with Sparse Approximation for Mismatch Removal, 
 //     Pattern Recognition, 46(12), pp. 3519-3532, 2013
 
-VFC::VFC(int method, int maxIter, float gamma, float beta, float lambda, float theta, float a, float ecr, float minP) {
+VFC::VFC(int method, int maxIter, float gamma, float beta, float lmbda, float theta, float a, float ecr, float minP) {
 	_lX.clear();
 	_rX.clear();
 	_X.clear();
@@ -40,7 +40,7 @@ VFC::VFC(int method, int maxIter, float gamma, float beta, float lambda, float t
 	_maxIter = maxIter;
 	_gamma = gamma;
 	_beta = beta;
-	_lambda = lambda;
+	_lambda = lmbda;
 	_theta = theta;
 	_a = a;
 	_ecr = ecr;
