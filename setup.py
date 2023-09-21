@@ -99,6 +99,7 @@ ext_modules = [
             '/usr/local/include/opencv4/'
         ],
         libraries=['opencv_core', 'opencv_highgui'],
+        library_dirs = ['/usr/local/lib'],
         language='c++',
     ),
 ]
